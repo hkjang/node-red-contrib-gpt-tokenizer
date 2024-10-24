@@ -1,0 +1,100 @@
+[
+  {
+    "id": "9db33223bca4bc9d",
+    "type": "gpt-tokenizer",
+    "z": "c18e765eb224d9be",
+    "name": "gpt-tokenizer",
+    "x": 450,
+    "y": 80,
+    "wires": [
+      [
+        "4ed29bc974cf2bb6"
+      ]
+    ]
+  },
+  {
+    "id": "0867d17f5f79ef4d",
+    "type": "inject",
+    "z": "c18e765eb224d9be",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 130,
+    "y": 80,
+    "wires": [
+      [
+        "1ea0acc3e8adcb86"
+      ]
+    ]
+  },
+  {
+    "id": "1ea0acc3e8adcb86",
+    "type": "function",
+    "z": "c18e765eb224d9be",
+    "name": "set payload",
+    "func": "msg.payload = '안녕하세요. 저는 ..'\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 290,
+    "y": 80,
+    "wires": [
+      [
+        "9db33223bca4bc9d"
+      ]
+    ]
+  },
+  {
+    "id": "a7c7dc45bec69338",
+    "type": "debug",
+    "z": "c18e765eb224d9be",
+    "name": "debug 19",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 840,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "4ed29bc974cf2bb6",
+    "type": "function",
+    "z": "c18e765eb224d9be",
+    "name": "check token length",
+    "func": "node.error('token length : '+msg.payload.length);\nreturn msg;",
+    "outputs": 1,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 650,
+    "y": 80,
+    "wires": [
+      [
+        "a7c7dc45bec69338"
+      ]
+    ]
+  }
+]

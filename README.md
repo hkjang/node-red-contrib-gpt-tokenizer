@@ -15,9 +15,11 @@ The ‘Nodes’ tab lists all of the modules you have installed. It shows which 
 
 The ‘Install’ tab lets you search the catalogue of available node modules and install them.
 
-JS Code for Node-RED
+Sample Flows for Node-RED
 ------
-```js
+You can make this json string into a flow by using the node-red flow import function.
+
+- [sample.json](examples/sample.json)
 
 
-```
+![alt](examples/sample.png)
