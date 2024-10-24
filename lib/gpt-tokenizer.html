@@ -1,0 +1,27 @@
+<script type="text/javascript">
+    RED.nodes.registerType('gpt-tokenizer',{
+        category: 'function',
+        color: '#DEBD5C',
+        defaults: {
+            name: {value: "gpt-tokenizer"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "jq.png",
+        label: function() {
+            return this.name || "gpt-tokenizer";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="gpt-tokenizer">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="gpt-tokenizer">
+    <p>gpt-tokenizer</p>
+    <p>gpt-tokenizer is a Token Byte Pair Encoder/Decoder supporting all OpenAI's models (including those used by GPT-2, GPT-3, GPT-3.5, GPT-4 and GPT-4o). It's the fastest, smallest and lowest footprint GPT tokenizer available for all JavaScript environments. It's written in TypeScript. </p>
+</script>
